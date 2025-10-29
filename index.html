@@ -1,0 +1,529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Spirit Wear Order Form&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>* {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 800px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 20px 60px rgba(0,0,0,0.3);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.header {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.header h1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2.5em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.header p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.9;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.shirt-preview {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 30px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.shirt-preview img {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 200px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 12px rgba(0,0,0,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.shirt-info {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.shirt-info h3 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.3em;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.shirt-info p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #555;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 5px 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.form-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 40px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.form-section {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.form-section h2 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.5em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 2px solid #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.form-group {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>label {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>input[type="text"],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>input[type="number"],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>select {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #e0e0e0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: border-color 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>input[type="text"]:focus,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>input[type="number"]:focus,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>select:focus {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>outline: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.size-grid {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.size-item {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f8f9fa;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #e0e0e0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.size-item label {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.size-item input {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 5px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.payment-section {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f8f9fa;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 20px 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.venmo-button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #008CFF;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.1em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 10px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: background 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.venmo-button:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #0077cc;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.submit-btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px 40px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.2em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.submit-btn:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-2px);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.submit-btn:disabled {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.6;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: not-allowed;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.total-section {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #667eea;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 20px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.total-section h3 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 1.3em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.total-amount {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 2em;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.success-message {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #4caf50;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 20px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.error-message {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f44336;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 20px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.info-box {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #e3f2fd;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left: 4px solid #2196F3;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 15px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>input[type="number"] {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1&gt;🏆 Byron Hoops Spirit Wear&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Support Your Team in Style!&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="shirt-preview"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://imgur.com/WBUwCQg" alt="Byron Hoops Shirt Front" id="shirtFront"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="shirt-info"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Official Byron Hoops T-Shirt&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;• Custom player name &amp; number on back&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;• High-quality Carolina Blue&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;• $28 per shirt&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;img src="https://imgur.com/cWqQdwF" alt="Byron Hoops Shirt Back" id="shirtBack"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="form-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;form id="orderForm"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Customer Information --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2&gt;Customer Information&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="firstName"&gt;First Name *&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="text" id="firstName" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="lastName"&gt;Last Name *&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="text" id="lastName" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Player Information --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2&gt;Player Information&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="playerNumber"&gt;Player Number *&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="text" id="playerNumber" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="playerLastName"&gt;Player Last Name *&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="text" id="playerLastName" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Shirt Sizes and Quantities --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2&gt;Select Sizes &amp; Quantities&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p style="color: #666; margin-bottom: 15px;"&gt;Enter quantity for each size you want to order. Price per shirt: $28&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="size-grid"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="size-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label&gt;Youth Small&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="number" id="qty_ys" min="0" value="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="size-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label&gt;Youth Medium&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="number" id="qty_ym" min="0" value="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="size-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label&gt;Youth Large&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="number" id="qty_yl" min="0" value="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="size-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label&gt;Small&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="number" id="qty_s" min="0" value="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="size-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label&gt;Medium&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="number" id="qty_m" min="0" value="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="size-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label&gt;Large&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="number" id="qty_l" min="0" value="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="size-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label&gt;X-Large&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="number" id="qty_xl" min="0" value="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="size-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label&gt;2X-Large&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="number" id="qty_2xl" min="0" value="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="size-item"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label&gt;3X-Large&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input type="number" id="qty_3xl" min="0" value="0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Total --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="total-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3&gt;Order Total&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="total-amount"&gt;$&lt;span id="totalAmount"&gt;0&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p style="margin-top: 10px; opacity: 0.9;"&gt;Total Items: &lt;span id="totalItems"&gt;0&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Payment Section --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="form-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2&gt;Payment&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="info-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;strong&gt;📱 Payment Instructions:&lt;/strong&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;ol style="margin-left: 20px; margin-top: 10px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;Click the "Pay with Venmo" button below&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;Complete your payment on Venmo&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;Return here and enter your Venmo username&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;li&gt;Submit the order form&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/ol&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button type="button" class="venmo-button" id="venmoBtn"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Pay with Venmo</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="form-group" style="margin-top: 20px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label for="venmoUsername"&gt;Venmo Username (for verification) *&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="text" id="venmoUsername" placeholder="@username" required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="success-message" id="successMessage"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>✓ Order submitted successfully! Thank you for your support!</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="error-message" id="errorMessage"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button type="submit" class="submit-btn" id="submitBtn"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Submit Order</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const PRICE_PER_SHIRT = 28;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const VENMO_USERNAME = '@YourBoosterClub'; // CHANGE THIS to your Venmo username</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Calculate total</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function calculateTotal() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const sizes = ['ys', 'ym', 'yl', 's', 'm', 'l', 'xl', '2xl', '3xl'];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let totalQty = 0;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>sizes.forEach(size =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const qty = parseInt(document.getElementById(`qty_${size}`).value) || 0;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>totalQty += qty;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const totalAmount = totalQty * PRICE_PER_SHIRT;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('totalAmount').textContent = totalAmount;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('totalItems').textContent = totalQty;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>return { totalQty, totalAmount };</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Add event listeners to all quantity inputs</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.querySelectorAll('input[type="number"]').forEach(input =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>input.addEventListener('input', calculateTotal);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Venmo payment button</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('venmoBtn').addEventListener('click', function() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const { totalAmount } = calculateTotal();</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (totalAmount === 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>alert('Please select at least one item before paying.');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Generate Venmo deep link</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const note = encodeURIComponent('Spirit Wear Order');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const venmoUrl = `venmo://paycharge?txn=pay&amp;recipients=${VENMO_USERNAME}&amp;amount=${totalAmount}&amp;note=${note}`;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Try to open Venmo app, fallback to web</p>
+<p class="p1"><span class="Apple-converted-space">            </span>window.location.href = venmoUrl;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const webUrl = `https://venmo.com/${VENMO_USERNAME}?txn=pay&amp;amount=${totalAmount}&amp;note=${note}`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>window.open(webUrl, '_blank');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}, 500);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Form submission</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('orderForm').addEventListener('submit', async function(e) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>e.preventDefault();</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const { totalQty, totalAmount } = calculateTotal();</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (totalQty === 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>showError('Please select at least one item.');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const submitBtn = document.getElementById('submitBtn');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>submitBtn.disabled = true;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>submitBtn.textContent = 'Submitting...';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Collect form data</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const formData = {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>timestamp: new Date().toLocaleString(),</p>
+<p class="p1"><span class="Apple-converted-space">                </span>firstName: document.getElementById('firstName').value,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>lastName: document.getElementById('lastName').value,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>playerNumber: document.getElementById('playerNumber').value,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>playerLastName: document.getElementById('playerLastName').value,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>qty_ys: document.getElementById('qty_ys').value || 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>qty_ym: document.getElementById('qty_ym').value || 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>qty_yl: document.getElementById('qty_yl').value || 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>qty_s: document.getElementById('qty_s').value || 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>qty_m: document.getElementById('qty_m').value || 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>qty_l: document.getElementById('qty_l').value || 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>qty_xl: document.getElementById('qty_xl').value || 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>qty_2xl: document.getElementById('qty_2xl').value || 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>qty_3xl: document.getElementById('qty_3xl').value || 0,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>totalItems: totalQty,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>totalAmount: totalAmount,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>venmoUsername: document.getElementById('venmoUsername').value</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// GOOGLE SHEETS INTEGRATION</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Replace 'YOUR_SCRIPT_URL' with your Google Apps Script Web App URL</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const scriptURL = 'YOUR_SCRIPT_URL';</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const response = await fetch(scriptURL, {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>method: 'POST',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>mode: 'no-cors',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>headers: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>'Content-Type': 'application/json',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>body: JSON.stringify(formData)</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>showSuccess();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('orderForm').reset();</p>
+<p class="p1"><span class="Apple-converted-space">                </span>calculateTotal();</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>showError('There was an error submitting your order. Please try again or contact us directly.');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>console.error('Error:', error);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>submitBtn.disabled = false;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>submitBtn.textContent = 'Submit Order';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function showSuccess() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const successMsg = document.getElementById('successMessage');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>successMsg.style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>successMsg.style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}, 5000);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>window.scrollTo({ top: 0, behavior: 'smooth' });</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function showError(message) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const errorMsg = document.getElementById('errorMessage');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>errorMsg.textContent = message;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>errorMsg.style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>errorMsg.style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}, 5000);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Initial calculation</p>
+<p class="p1"><span class="Apple-converted-space">        </span>calculateTotal();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
