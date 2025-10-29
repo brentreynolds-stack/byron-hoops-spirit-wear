@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,25 +46,15 @@
         }
 
         .shirt-preview {
-            display: flex;
-            justify-content: center;
-            align-items: left;
-            gap: 20px;
             margin: 30px 0;
             padding: 20px;
             background: white;
             border-radius: 12px;
         }
 
-        .shirt-preview img {
-            max-width: 100px;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
         .shirt-info {
-            text-align: left;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
         .shirt-info h3 {
@@ -75,6 +66,29 @@
         .shirt-info p {
             color: #555;
             margin: 5px 0;
+        }
+
+        .shirt-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .shirt-images img {
+            max-width: 100%;
+            width: 280px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .shirt-images img {
+                width: 100%;
+                max-width: 100%;
+            }
         }
 
         .form-container {
@@ -220,6 +234,19 @@
             margin: 20px 0;
             display: none;
             text-align: center;
+            font-size: 1.1em;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .error-message {
@@ -252,13 +279,15 @@
             
             <div class="shirt-preview">
                 <div class="shirt-info">
-                    <h3>Booster Club Byron Hoops T-Shirt</h3>
-                    <p>• Help Support your favorite Lady Bobcat!</p>
-                    <p>• Custom Tee w/her Name & #</p>
+                    <h3>Official Byron Hoops T-Shirt</h3>
+                    <p>• Custom player name & number on back</p>
+                    <p>• High-quality Carolina Blue</p>
                     <p>• $28 per shirt</p>
                 </div>
+                <div class="shirt-images">
                 <img src="https://i.imgur.com/WBUwCQg.png" alt="Byron Hoops Shirt Front" id="shirtFront">
                 <img src="https://i.imgur.com/cWqQdwF.png" alt="Byron Hoops Shirt Back" id="shirtBack">
+               </div>
             </div>
         </div>
 
@@ -290,7 +319,8 @@
                     </div>
                 </div>
 
-                <!-- Shirt Sizes and Quantities -->
+
+                 <!-- Shirt Sizes and Quantities -->
                 <div class="form-section">
                     <h2>Select Sizes & Quantities</h2>
                     <p style="color: #666; margin-bottom: 15px;">Enter quantity for each size you want to order. Price per shirt: $28</p>
@@ -348,8 +378,9 @@
                         <strong>📱 Payment Instructions:</strong>
                         <ol style="margin-left: 20px; margin-top: 10px;">
                             <li>Click the "Pay with Venmo" button below (or manually open Venmo)</li>
-                            <li>Complete your payment on Venmo (if manual, search for @AngelReynolds7)</li>
-                            <li>Add note: "Bryon Hoops Spirit Wear"</li>
+                            <li>Search for <strong>@<span id="venmoDisplay"></span></strong> in Venmo</li>
+                            <li>Send the total amount shown above</li>
+                            <li>Add note: "Byron Hoops Spirit Wear"</li>
                             <li>Return here and enter your Venmo username</li>
                             <li>Submit the order form</li>
                         </ol>
@@ -360,8 +391,11 @@
                     </button>
 
                     <div class="form-group" style="margin-top: 20px;">
-                        <label for="venmoUsername">Venmo Username (for verification) *</label>
+                        <label for="venmoUsername">Your Venmo Username (for verification) *</label>
                         <input type="text" id="venmoUsername" placeholder="@username" required>
+                        <small style="color: #666; display: block; margin-top: 5px;">
+                            Enter your Venmo username so we can verify your payment
+                        </small>
                     </div>
                 </div>
 
@@ -380,7 +414,7 @@
 
     <script>
         const PRICE_PER_SHIRT = 28;
-        const VENMO_USERNAME = 'AngelReynolds7'; // CHANGE THIS to your Venmo username
+        const VENMO_USERNAME = 'AngelReynolds7'; // CHANGE THIS to your Venmo username WITHOUT the @ symbol
 
         // Calculate total
         function calculateTotal() {
@@ -413,17 +447,30 @@
                 return;
             }
 
-            // Generate Venmo deep link
-            const note = encodeURIComponent('Spirit Wear Order');
-            const venmoUrl = `venmo://paycharge?txn=pay&recipients=${VENMO_USERNAME}&amount=${totalAmount}&note=${note}`;
+            // Generate Venmo URLs (note: username should NOT have @ symbol in the constant)
+            const note = encodeURIComponent('Byron Hoops Spirit Wear');
             
-            // Try to open Venmo app, fallback to web
-            window.location.href = venmoUrl;
+            // For mobile app
+            const venmoAppUrl = `venmo://paycharge?txn=pay&recipients=${VENMO_USERNAME}&amount=${totalAmount}&note=${note}`;
             
-            setTimeout(() => {
-                const webUrl = `https://venmo.com/${VENMO_USERNAME}?txn=pay&amount=${totalAmount}&note=${note}`;
-                window.open(webUrl, '_blank');
-            }, 500);
+            // For web browser
+            const venmoWebUrl = `https://account.venmo.com/u/${VENMO_USERNAME}`;
+            
+            // Detect if on mobile
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            
+            if (isMobile) {
+                // On mobile, try to open app first
+                window.location.href = venmoAppUrl;
+                // Fallback to web after short delay if app doesn't open
+                setTimeout(() => {
+                    alert(`If Venmo app didn't open, please:\n1. Search for @${VENMO_USERNAME} in Venmo\n2. Send ${totalAmount}\n3. Add note: "Byron Hoops Spirit Wear"`);
+                }, 2000);
+            } else {
+                // On desktop, open web version and show instructions
+                window.open(venmoWebUrl, '_blank');
+                alert(`Please complete payment in Venmo:\n\n1. Log into Venmo in the new window\n2. Search for @${VENMO_USERNAME}\n3. Send ${totalAmount}\n4. Add note: "Byron Hoops Spirit Wear"\n5. Return here to complete your order`);
+            }
         });
 
         // Form submission
@@ -464,7 +511,7 @@
 
             // GOOGLE SHEETS INTEGRATION
             // Replace 'YOUR_SCRIPT_URL' with your Google Apps Script Web App URL
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbz7iDyxO8ZS57XsOwv0RtSmvZJNXa1C4T2BLn53RE2dI7fYPCBSehza87ilnJaJmziFHg/exec';
+            const scriptURL = 'YOUR_SCRIPT_URL';
             
             try {
                 const response = await fetch(scriptURL, {
@@ -492,10 +539,15 @@
         function showSuccess() {
             const successMsg = document.getElementById('successMessage');
             successMsg.style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Keep visible for 10 seconds on mobile, 8 seconds on desktop
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            const duration = isMobile ? 10000 : 8000;
+            
             setTimeout(() => {
                 successMsg.style.display = 'none';
-            }, 5000);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            }, duration);
         }
 
         function showError(message) {
@@ -509,6 +561,9 @@
 
         // Initial calculation
         calculateTotal();
+        
+        // Display Venmo username in instructions
+        document.getElementById('venmoDisplay').textContent = VENMO_USERNAME;
     </script>
 </body>
 </html>
